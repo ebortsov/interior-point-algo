@@ -108,6 +108,7 @@ def main():
     try:
         x1 = maximize_with_interior_point(C, A, b, x0, alpha1, eps)
         x2 = maximize_with_interior_point(C, A, b, x0, alpha2, eps)
+        np.set_printoptions(precision=7, suppress=True)
         print(f"alpha = {alpha1:.2f}: {x1}")
         print(f"alpha = {alpha2:.2f}: {x2}")
     except Exception as e:
